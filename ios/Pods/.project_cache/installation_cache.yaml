@@ -9169,6 +9169,9 @@ CACHE_KEYS:
       EXUpdates:
         :debug: 14a46dece9389c0241fc237561314e4d
         :release: 14a46dece9389c0241fc237561314e4d
+      EXUpdates/Tests:
+        :debug: b7381e3d79a3762f6bfde9f1be314a0f
+        :release: b7381e3d79a3762f6bfde9f1be314a0f
     CHECKSUM: 67b0ffc663397714a047cc2069225a33c2dc5cf1
     FILES:
       - "../../packages/expo-updates/ios/EXUpdates/AppLauncher/EXUpdatesAppLauncher.h"
@@ -9177,6 +9180,8 @@ CACHE_KEYS:
       - "../../packages/expo-updates/ios/EXUpdates/AppLauncher/EXUpdatesAppLauncherWithDatabase.h"
       - "../../packages/expo-updates/ios/EXUpdates/AppLauncher/EXUpdatesAppLauncherWithDatabase.m"
       - "../../packages/expo-updates/ios/EXUpdates/AppLauncher/EXUpdatesSelectionPolicy.h"
+      - "../../packages/expo-updates/ios/EXUpdates/AppLauncher/EXUpdatesSelectionPolicyFilterAware.h"
+      - "../../packages/expo-updates/ios/EXUpdates/AppLauncher/EXUpdatesSelectionPolicyFilterAware.m"
       - "../../packages/expo-updates/ios/EXUpdates/AppLauncher/EXUpdatesSelectionPolicyNewest.h"
       - "../../packages/expo-updates/ios/EXUpdates/AppLauncher/EXUpdatesSelectionPolicyNewest.m"
       - "../../packages/expo-updates/ios/EXUpdates/AppLoader/EXUpdatesAppLoader+Private.h"
@@ -9217,9 +9222,16 @@ CACHE_KEYS:
       - "../../packages/expo-updates/ios/EXUpdates/Update/EXUpdatesUpdate+Private.h"
       - "../../packages/expo-updates/ios/EXUpdates/Update/EXUpdatesUpdate.h"
       - "../../packages/expo-updates/ios/EXUpdates/Update/EXUpdatesUpdate.m"
+      - "../../packages/expo-updates/ios/Tests/EXUpdatesLegacyUpdateTests.m"
+      - "../../packages/expo-updates/ios/Tests/EXUpdatesNewUpdateTests.m"
+      - "../../packages/expo-updates/ios/Tests/EXUpdatesSelectionPolicyFilterAwareTests.m"
+      - "../../packages/expo-updates/ios/Tests/EXUpdatesSelectionPolicyNewestTests.m"
+      - "../../packages/expo-updates/ios/Tests/EXUpdatesUpdateTests.m"
+      - "../../packages/expo-updates/ios/Tests/Tests.m"
     PROJECT_NAME: EXUpdates
     SPECS:
       - EXUpdates (0.5.0-rc.0)
+      - EXUpdates/Tests (0.5.0-rc.0)
   EXVideoThumbnails:
     BUILD_SETTINGS_CHECKSUM:
       EXVideoThumbnails:
@@ -9575,8 +9587,8 @@ CACHE_KEYS:
       - nanopb/encode (0.3.9011)
   Pods-Exponent:
     BUILD_SETTINGS_CHECKSUM:
-      Debug: 88a444d930037778b576a77f02e4f788
-      Release: 88a444d930037778b576a77f02e4f788
+      Debug: b177616604be05958d5a104546536075
+      Release: b177616604be05958d5a104546536075
     FILES:
       - "${PODS_CONFIGURATION_BUILD_DIR}/ABI39_0_0React-Core/ABI39_0_0AccessibilityResources.bundle"
       - "${PODS_CONFIGURATION_BUILD_DIR}/ABI40_0_0React-Core/ABI40_0_0AccessibilityResources.bundle"
