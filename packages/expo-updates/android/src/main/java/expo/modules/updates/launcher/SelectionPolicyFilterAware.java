@@ -83,10 +83,19 @@ public class SelectionPolicyFilterAware implements SelectionPolicy {
     if (newUpdate == null) {
       return false;
     }
+    if (launchedUpdate == null) {
+      return true;
+    }
     // if the current update doesn't pass the manifest filters
     // we should load the new update no matter the commitTime
-    if (launchedUpdate == null || isUpdateManifestFiltered(launchedUpdate, filters)) {
+    if (isUpdateManifestFiltered(launchedUpdate, filters)) {
       return true;
+    } else {
+      // if the new update doesn't pass the manifest filters AND the launched update does
+      // (i.e. we're sure we have an update that passes), we should not load the new update
+      if (isUpdateManifestFiltered(newUpdate, filters)) {
+        return false;
+      }
     }
     return newUpdate.commitTime.after(launchedUpdate.commitTime);
   }
